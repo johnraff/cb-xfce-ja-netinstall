@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://openbox.org/
+                file:///usr/share/openbox/menu.xsd">
+
+    <menu id="root-menu" label="Openbox 3">
+        <item label="プログラムの実行…">
+            <action name="Execute">
+                <command>
+                    gmrun
+                </command>
+            </action>
+        </item>
+        <separator/>
+        <item label="ターミナル">
+            <action name="Execute">
+                <command>
+                    terminator
+                </command>
+            </action>
+        </item>
+        <item label="ウエブブラウザ">
+            <action name="Execute">
+                <command>
+                    x-www-browser
+                </command>
+            </action>
+        </item>
+        <item label="フアイルマネジャ">
+            <action name="Execute">
+                <command>
+                    thunar
+                </command>
+            </action>
+        </item>
+        <item label="テキストエディタ">
+            <action name="Execute">
+                <command>
+                    geany
+                </command>
+            </action>
+        </item>
+        <item label="メディアプレイヤー">
+            <action name="Execute">
+                <command>
+                    vlc
+                </command>
+            </action>
+        </item>
+        <separator/>
+        <menu id="accessories" label="アクセサリ">
+            <item label="Catfish フアイル検索">
+                <action name="Execute">
+                    <command>
+                        catfish
+                    </command>
+                </action>
+            </item>
+            <item label="アーカイブマネジャ">
+                <action name="Execute">
+                    <command>
+                        file-roller
+                    </command>
+                </action>
+            </item>
+            <item label="Geany テキストエディタ">
+                <action name="Execute">
+                    <command>
+                        geany
+                    </command>
+                </action>
+            </item>
+            <item label="タスクマネージャ (htop)">
+                <action name="Execute">
+                    <command>terminator --command=&quot;htop&quot;</command>
+                </action>
+            </item>
+            <item label="Terminator ターミナル">
+                <action name="Execute">
+                    <command>
+                        terminator
+                    </command>
+                </action>
+            </item>
+            <item label="Thunar ファイルマネージャ">
+                <action name="Execute">
+                    <command>
+                        thunar
+                    </command>
+                </action>
+            </item>
+            <item label="Thunar ファイルマネージャ (root)">
+                <action name="Execute">
+                    <command>
+                        gksudo thunar
+                    </command>
+                </action>
+            </item>
+        </menu>
+        <menu id="graphics" label="グラフィックス">
+            <item label="GIMP">
+                <action name="Execute">
+                    <command>
+                        gimp
+                    </command>
+                </action>
+            </item>
+            <item label="Viewnior イメージビユアー">
+                <action name="Execute">
+                    <command>
+                        viewnior
+                    </command>
+                </action>
+            </item>
+            <menu id="graphicsScreenshots" label="スクリーンショットをとる">
+                <item label="Screenshooter">
+                    <action name="Execute">
+                        <command>
+                            xfce4-screenshooter
+                        </command>
+                    </action>
+                </item>
+                <separator label="scrot"/>
+                <item label="今">
+                    <action name="Execute">
+                        <command>
+                            scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/ &amp; viewnior ~/images/$f'
+                        </command>
+                    </action>
+                </item>
+                <item label="５秒後...">
+                    <action name="Execute">
+                        <command>
+                            scrot -d 5 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/ &amp; viewnior ~/images/$f'
+                        </command>
+                    </action>
+                </item>
+                <item label="１０秒後...">
+                    <action name="Execute">
+                        <command>
+                            scrot -d 10 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/ &amp; viewnior ~/images/$f'
+                        </command>
+                    </action>
+                </item>
+                <item label="セレクトしたエリア... (クリック、マウスをドラッグ)">
+                    <action name="Execute">
+                        <command>
+                            scrot -s '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/images/ &amp; viewnior ~/images/$f'
+                        </command>
+                    </action>
+                </item>
+            </menu>
+        </menu>
+        <menu id="multimedia" label="マルチメディア">
+            <item label="VLC メディアプレイヤ">
+                <action name="Execute">
+                    <command>
+                        vlc
+                    </command>
+                </action>
+            </item>
+            <item label="音量">
+                <action name="Execute">
+                    <command>
+                        pavucontrol
+                    </command>
+                </action>
+            </item>
+            <item label="XfburnでＣＤを焼く">
+                <action name="Execute">
+                    <command>
+                        xfburn
+                    </command>
+                </action>
+            </item>
+        </menu>
+        <menu id="network" label="ネットワーク">
+            <menu execute="cb-x-www-browser-pipemenu" id="wwwbrowsers" label="WWW ブラウザー"/>
+            <item label="gFTP クライエント">
+                <action name="Execute">
+                    <command>
+                        gftp
+                    </command>
+                </action>
+            </item>
+            <item label="Transmission ビットレートクライエント">
+                <action name="Execute">
+                    <command>
+                        transmission-gtk
+                    </command>
+                </action>
+            </item>
+            <item label="XChat IRC クライエント">
+                <action name="Execute">
+                    <command>
+                        xchat
+                    </command>
+                </action>
+            </item>
+            <item label="遠隔ファイルシステム">
+                <action name="Execute">
+                    <command>
+                        gigolo
+                    </command>
+                </action>
+            </item>
+            <menu execute="cb-remote-desktop-pipemenu" id="remotedesktop" label="遠隔デスクトップ"/>
+            <menu execute="cb-sshconfig-pipemenu" id="sshconfig" label="SSH"/>
+            <separator label="Services"/>
+            <menu execute="cb-dropbox-pipemenu" id="dropbox" label="ドロップボックス"/>
+        </menu>
+        <menu id="office" label="オフィス">
+            <menu id="libreoffice" label="LibreOffice" execute="cb-libreoffice-pipemenu" />
+            <item label="Google ドキュメント">
+                <action name="Execute">
+                    <command>
+                        x-www-browser https://drive.google.com/
+                    </command>
+                </action>
+            </item>
+            <item label="AbiWord ワードプロセッサ">
+                <action name="Execute">
+                    <command>
+                        abiword
+                    </command>
+                </action>
+            </item>
+            <item label="Gnumeric スプレッドシート">
+                <action name="Execute">
+                    <command>
+                        gnumeric
+                    </command>
+                </action>
+            </item>
+            <item label="計算機">
+                <action name="Execute">
+                    <command>
+                        galculator
+                    </command>
+                </action>
+            </item>
+            <item label="Evince PDF ビュアー">
+                <action name="Execute">
+                    <command>
+                        evince
+                    </command>
+                </action>
+            </item>
+        </menu>
+        <separator/>
+        <menu execute="cb-places-pipemenu" id="pipe-placesmenu" label="プレース"/>
+        <menu execute="cb-recent-files-pipemenu" id="pipe-recentfilesmenu" label="最近のファイル"/>
+        <separator/>
+        <menu id="settings" label="設定">
+            <menu execute="cb-compositor" id="CompositingPipeMenu" label="合成"/>
+            <menu id="conkyconfig" label="Conky">
+                <item label=".conkyrcなどを編集">
+                    <action name="Execute">
+                        <command>
+                            geany ~/.config/user/conky-sysmonrc ~/.config/user/conky-netmonrc ~/.conkyrc
+                        </command>
+                    </action>
+                </item>
+                <item label="Conkyを再起動">
+                    <action name="Execute">
+                        <command>
+                            conkywonky
+                        </command>
+                    </action>
+                </item>
+                <separator label="ヘルプ"/>
+                <item label="man page">
+                    <action name="Execute">
+                        <command>
+                            terminator --command="man conky"
+                        </command>
+                    </action>
+                </item>
+                <item label="ウィキページ">
+                    <action name="Execute">
+                        <command>
+                            x-www-browser http://crunchbanglinux.org/wiki/conky
+                        </command>
+                    </action>
+                </item>
+            </menu>
+            <menu id="dmenuconfig" label="dmenu">
+                <item label="起動スクリプトを編集">
+                    <action name="Execute">
+                        <command>
+                            geany ~/.config/dmenu/dmenu-bind.sh
+                        </command>
+                    </action>
+                </item>
+                <separator label="ヘルプ"/>
+                <item label="man page">
+                    <action name="Execute">
+                        <command>
+                            terminator --command="man dmenu"
+                        </command>
+                    </action>
+                </item>
+            </menu>
+            <menu id="gmrunconfig" label="gmrun">
+                <item label="設定ファイルを編集">
+                    <action name="Execute">
+                        <command>
+                            geany ~/.gmrunrc
+                        </command>
+                    </action>
+                </item>
+                <separator label="ヘルプ"/>
+                <item label="man page">
+                    <action name="Execute">
+                        <command>
+                            terminator --command="man gmrun"
+                        </command>
+                    </action>
+                </item>
+            </menu>
+            <menu id="obConfig" label="Openbox">
+                <item label="menu-xfce-ja.xmlを編集">
+                    <action name="Execute">
+                        <command>
+                            geany ~/.config/openbox/menu-xfce-ja.xml
+                        </command>
+                    </action>
+                </item>
+                <item label="rc-xfce-ja.xmlを編集">
+                    <action name="Execute">
+                        <command>
+                            geany ~/.config/openbox/rc-xfce-ja.xml
+                        </command>
+                    </action>
+                </item>
+                <item label="autostart-xfceを編集">
+                    <action name="Execute">
+                        <command>
+                            geany ~/bin/autostart-xfce
+                        </command>
+                    </action>
+                </item>
+<!--
+                <separator/>
+                <item label="GUI メニューエディタ">
+                    <action name="Execute">
+                        <command>
+                            obmenu
+                        </command>
+                    </action>
+                </item>
+                <item label="GUI アップ設定エディタ">
+                    <action name="Execute">
+                        <command>
+                            obapps
+                        </command>
+                    </action>
+                </item>
+-->
+                <item label="GUI 設定ツール">
+                    <action name="Execute">
+                        <command>
+                            obconf --config-file ~/.config/openbox/rc-xfce-ja.xml
+                        </command>
+                    </action>
+                </item>
+                <separator/>
+                <item label="再設定">
+                    <action name="Reconfigure"/>
+                </item>
+                <item label="再起動">
+                    <action name="Restart"/>
+                </item>
+            </menu>
+            <menu id="terminatorconfig" label="Terminator">
+                <item label="設定ファイルを編集">
+                    <action name="Execute">
+                        <command>
+                            geany ~/.config/terminator/config
+                        </command>
+                    </action>
+                </item>
+                <separator label="ヘルプ"/>
+                <item label="man page">
+                    <action name="Execute">
+                        <command>
+                            terminator --command="man terminator_config"
+                        </command>
+                    </action>
+                </item>
+            </menu>
+<!--
+            <menu id="tint2config" label="tint2">
+                <item label="設定ファイルを編集">
+                    <action name="Execute">
+                        <command>
+                            geany ~/.config/tint2/tint2rc
+                        </command>
+                    </action>
+                </item>
+                <item label="tint2を再起動">
+                    <action name="Execute">
+                        <command>
+                            tint2restart
+                        </command>
+                    </action>
+                </item>
+                <separator label="ヘルプ"/>
+                <item label="man page">
+                    <action name="Execute">
+                        <command>
+                            terminator -e "man tint2"
+                        </command>
+                    </action>
+                </item>
+                <item label="オンラインヘルプ">
+                    <action name="Execute">
+                        <command>
+                            x-www-browser http://code.google.com/p/tint2/wiki/Welcome
+                        </command>
+                    </action>
+                </item>
+            </menu>
+-->
+            <menu id="DisplaySettings" label="ディスプレイ設定">
+                <item label="ARandR Screen Layout Editor">
+                    <action name="Execute">
+                        <command>
+                            arandr
+                        </command>
+                    </action>
+                </item>
+                <separator label="ヘルプ"/>
+                <item label="man xrandr">
+                    <action name="Execute">
+                        <command>
+                            terminator --command="man xrandr"
+                        </command>
+                    </action>
+                </item>
+            </menu>
+            <menu id="Notifications" label="通知">
+                <item label="設定">
+                    <action name="Execute">
+                        <command>xfce4-notifyd-config</command>
+                    </action>
+                </item>
+            </menu>
+            <item label="デフォルトアップリを編集">
+                <action name="Execute">
+                    <command>
+                        terminator --command="sudo update-alternatives --all"
+                    </command>
+                </action>
+            </item>
+<!--
+            <item label="ユーザーインターフェースの設定">
+                <action name="Execute">
+                    <command>
+                        lxappearance
+                    </command>
+                </action>
+            </item>
+-->
+            <item label="パワーマネジメント">
+                <action name="Execute">
+                    <command>
+                        xfce4-power-manager-settings
+                    </command>
+                </action>
+            </item>
+            <item label="スクリーンセイバー">
+                <action name="Execute">
+                    <command>
+                        xscreensaver-demo
+                    </command>
+                </action>
+            </item>
+<!--
+            <item label="壁紙を選ぶ">
+                <action name="Execute">
+                    <command>
+                        nitrogen ~/images/wallpapers/
+                    </command>
+                </action>
+            </item>
+-->
+        </menu>
+        <menu id="system" label="システム">
+            <menu execute="cb-printing-pipemenu" id="PrintingPipeMenu" label="プリンター"/>
+            <item label="GPartedでパーティションを編集">
+                <action name="Execute">
+                    <command>
+                        gksudo gparted
+                    </command>
+                </action>
+            </item>
+            <item label="Synaptic パッケージマネジャー">
+                <action name="Execute">
+                    <command>
+                        gksudo synaptic
+                    </command>
+                </action>
+            </item>
+            <item label="ユーザーログインの設定">
+                <action name="Execute">
+                    <command>
+                        gksudo slimconf
+                    </command>
+                </action>
+            </item>
+        </menu>
+        <!--<menu id="help" label="ヘルプ" execute="cb-help-pipemenu" />-->
+        <separator/>
+        <item label="スクリーンをロック">
+            <action name="Execute">
+                <command>
+                    cb-lock
+                </command>
+            </action>
+        </item>
+        <item label="ログアウト">
+            <action name="Execute">
+                <command>
+                    xfce4-session-logout
+                </command>
+            </action>
+        </item>
+    </menu>
+</openbox_menu>

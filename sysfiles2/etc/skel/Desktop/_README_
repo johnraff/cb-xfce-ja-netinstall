@@ -1,6 +1,6 @@
-Welcome to #!-XFCE!
+クランチバング-XFCE日本語版へようこそ！
 
-This is an unofficial CrunchBang respin - a standard Waldorf system with an XFCE desktop environment on top, and a few extra applications installed. Openbox is substituted for the XFCE window manager so the usual Crunchbang menu and pipe-menus are available, as are the standard keyboard shortcuts.
+This is an unofficial CrunchBang respin - a standard Waldorf system with an XFCE desktop environment on top, a few extra applications installed and localized for Japanese. Openbox is substituted for the XFCE window manager so the usual Crunchbang menu and pipe-menus are available, as are the standard keyboard shortcuts.
 
 NOTES FOR USERS
 *) The Crunchbang menu can be called by the "Menu" key, if you have one, "Super"+"Space", or from the panel at the top of the screen. It is also in the XFCE menu, under "other". Some entries (such as "Exit", which calls the XFCE Logout dialogue) have been modified, and some (such as "User Interface", which calls lxappearance) have been removed because they might clash with the XFCE settings interface.

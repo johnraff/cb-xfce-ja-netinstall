@@ -1,6 +1,19 @@
+このスクリプトはデビアンのネットインストールからクランチバングの
+XFCE-Openboxバーションの日本語版をインストールしようとします。
+
+しかし、これは正式なクランチバングのインストール方法ではありません。
+問題がおきてもクランチバングは一切責任をもちませんが、
+フォーラムでは他のメンバーのある程度の助けを得られるかもしれません。（英語で）
+
+また、インストール中のメセージが全部英語です。
+
+どうぞよろしくお願いします。
+
 This will attempt to install the configuration files and packages
-needed to build an XFCE-Openbox Crunchbang respin.
+needed to build an XFCE-Openbox Japanese-localized Crunchbang respin.
 However, this is NOT an official CrunchBang install medium.
 Any problems you may experience are not the responsibility of
 CrunchBang, although you may possibly be able to resolve some of them
 by asking other users at the CrunchBang Forums.
+All messages from the script during the installation process
+will be in English.

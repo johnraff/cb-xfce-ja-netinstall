@@ -1,5 +1,16 @@
-This is a collection of files intended to install an XFCE-Openbox respin
-of the CrunchBang Waldorf desktop environment
+このスクリプトは基本的なDebianシステムにクランチバングの
+XFCE-Openboxバーションの日本語版をインストールします。
+
+しかし、正式なクランチバングのインストール方法ではありません。
+なにか問題がおきてもクランチバングは一切責任をもちませんが、
+フォーラムでは他のメンバーのある程度の助けを得られるかもしれません。（英語で）
+
+また、インストール中のメセージが全部英語です。
+
+どうぞよろしくお願いします。
+
+This is a collection of files intended to install an XFCE-Openbox
+Japanese-localized respin of the CrunchBang Waldorf desktop environment
 on a basic command-line-only Debian Wheezy system.
 It will modify and add some system files, install the necessary
 packages and copy configuration files into your home directory.
@@ -29,11 +40,11 @@ HOW TO USE
 
 Boot into your Debian Netinstall cli system,
 log in and run these commands, as a normal user:
-(A fresh copy of this cb-xfce-netinstall package will be downloaded.)
+(A fresh copy of this cb-xfce-ja-netinstall package will be downloaded.)
 
-wget http://dl.dropbox.com/u/10808732/cb-xfce-netinstall.tar.gz
-tar -xpf cb-xfce-netinstall.tar.gz
-cd cb-xfce-netinstall
+wget http://dl.dropbox.com/u/10808732/cb-xfce-ja-netinstall.tar.gz
+tar -xpf cb-xfce-ja-netinstall.tar.gz
+cd cb-xfce-ja-netinstall
 ./install
 
 The installation process will start.
@@ -100,8 +111,8 @@ except "standard system utilities".
 You will have a core system only, on which
 the netinstall installer will add what is needed.
 (Some software items will be marked with an asterisk, indicating that
-they have been preselected.
-Use the up/down arrows to move, and the spacebar to toggle selection.)
+they have been preselected. Use the spacebar to toggle selection and
+the up/down arrows to move.)
 
 The netinstall download and links to documentation can be found here:
 http://www.debian.org/CD/netinst/

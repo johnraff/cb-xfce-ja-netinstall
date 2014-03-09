@@ -7,6 +7,7 @@
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="plugin-ids" type="array">
+        <value type="int" value="1"/>
         <value type="int" value="4"/>
         <value type="int" value="3"/>
         <value type="int" value="6"/>
@@ -17,14 +18,13 @@
       <property name="size" type="uint" value="26"/>
     </property>
     <property name="panel-1" type="empty">
-      <property name="position" type="string" value="p=9;x=519;y=26"/>
+      <property name="position" type="string" value="p=11;x=550;y=26"/>
       <property name="size" type="uint" value="50"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="14"/>
-        <value type="int" value="1"/>
-        <value type="int" value="8"/>
         <value type="int" value="9"/>
+        <value type="int" value="8"/>
         <value type="int" value="12"/>
         <value type="int" value="2"/>
         <value type="int" value="11"/>
@@ -38,10 +38,9 @@
   </property>
   <property name="plugins" type="empty">
     <property name="plugin-1" type="string" value="applicationsmenu">
-      <property name="button-title" type="string" value="XFCE Menu"/>
+      <property name="button-title" type="string" value="メニュー"/>
       <property name="show-generic-names" type="bool" value="false"/>
       <property name="show-tooltips" type="bool" value="true"/>
-      <property name="show-button-title" type="bool" value="false"/>
     </property>
     <property name="plugin-3" type="string" value="tasklist">
       <property name="show-handle" type="bool" value="false"/>
@@ -59,10 +58,13 @@
         <value type="string" value="pnmixer"/>
         <value type="string" value="main.py"/>
         <value type="string" value="networkmanager applet"/>
+        <value type="string" value="ibus パネル"/>
         <value type="string" value="ibus panel"/>
-        <value type="string" value="gigolo"/>
+        <value type="string" value="networkmanager アプレット"/>
         <value type="string" value="clipit"/>
         <value type="string" value="orage"/>
+        <value type="string" value="gigolo"/>
+        <value type="string" value="radiotray"/>
         <value type="string" value="notifications"/>
         <value type="string" value="update-notifier"/>
         <value type="string" value="xfce4-power-manager"/>

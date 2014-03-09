@@ -1,5 +1,10 @@
 # commands to run after installing all files and packages
 
+# add Japanese locale (an edited etc/locale.gen has been added)
+sudo locale-gen > >( tee -a "$logfile" ) 2>&1 || errmsg "failed to generate new locale"
+# set mozc as default ime
+gconftool --type=list --list-type=string --set /desktop/ibus/general/preload_engines "[mozc-jp]" > >( tee -a "$logfile" ) 2>&1  || errmsg "failed to reconfigure ibus with gconftool"
+
 # add any needed extra groups
 for i in cbnetwork
 do
@@ -26,4 +31,10 @@ sudo update-gconf-defaults > >( tee -a "$logfile" ) 2>&1 || errmsg "failed to up
 # to pre-empt /usr/share/crunchbang/cb-user-setup
 [[ -w "$HOME/.gtk-bookmarks" ]] && sed --in-place "s/REPLACEME/$user/" $HOME/.gtk-bookmarks > >( tee -a "$logfile" ) 2>&1 || errmsg "failed to edit .gtk-bookmarks"
 [[ -e $HOME/images/wallpapers/shared ]] || ln -s /usr/share/backgrounds $HOME/images/wallpapers/shared > >( tee -a "$logfile" ) 2>&1 || errmsg "failed to add symlink to shared wallpapers"
+
 touch $HOME/.config/crunchbang/cb-setup > >( tee -a "$logfile" ) 2>&1 || errmsg "failed to touch .config/crunchbang/cb-setup"
+
+# replace rc.xml with japanese-configured version for openbox (non-xfce) sessions
+# (this will call menu-ja.xml instead of menu.xml)
+cp $HOME/.config/openbox/rc.xml $HOME/.config/openbox/rc-orig.xml > >( tee -a "$logfile" ) 2>&1 || errmsg "failed to copy .config/openbox/rc.xml to rc-orig.xml"
+cp -f $HOME/.config/openbox/rc-ja.xml $HOME/.config/openbox/rc.xml > >( tee -a "$logfile" ) 2>&1 || errmsg "failed to copy .config/openbox/rc-ja.xml to rc.xml"

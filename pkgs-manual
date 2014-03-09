@@ -1,9 +1,21 @@
 # comments are allowed
 cb-metapackage # comments after entries are OK too
 faenza-crunchbang-icon-theme
+fonts-vlgothic
+ibus-mozc
+im-switch
 software-center
 update-notifier
 software-properties-gtk
 xfce4
 mousepad
+radiotray
 icedove
+icedove-l10n-ja
+iceweasel-l10n-ja
+#libreoffice-writer
+#libreoffice-l10n-ja
+#libreoffice-help-ja
+#libreoffice-help-en-us
+#libreoffice-gtk
+#libreoffice-gtk3
