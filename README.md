@@ -25,11 +25,9 @@ and all the usual caveats apply.
 This is NOT an official CrunchBang install medium.
 Any problems you may experience are not the responsibility of
 CrunchBang, although you may possibly be able to resolve some of them
-by asking other users at the CrunchBang Forums. The support thread for
-this installer is here:
-http://crunchbang.org/forums/viewtopic.php?id=25098
-There is also a thread for discussion of bugs, improvements
-or customization here:
+by asking other users at the CrunchBang Forums.
+There is a thread for discussion of bugs, improvements
+or customization of the basic netinstaller here:
 http://crunchbang.org/forums/viewtopic.php?id=21266
 
 This installer is intended to be run on a newly installed
