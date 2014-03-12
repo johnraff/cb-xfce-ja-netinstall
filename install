@@ -165,6 +165,12 @@ sudo -v || giveup "You do not appear to have permission to use sudo,
 which is needed in this script.
 Please make the necessary adjustments to your system and try again." 1
 
+# initial tweaking
+bigmsg "Adjusting some system settings."
+[[ -r preinstall_commands ]] && {
+    . preinstall_commands
+}
+
 bigmsg "Upgrading system before install
 (this may take a little while)"
 
