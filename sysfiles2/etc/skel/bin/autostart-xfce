@@ -53,4 +53,4 @@ xset b off &
 (sleep 10s && cb-welcome --firstrun) &
 
 ## cb-fortune - have Waldorf say a little adage
-(sleep 120s && cb-fortune) &
+#(sleep 120s && cb-fortune) &
