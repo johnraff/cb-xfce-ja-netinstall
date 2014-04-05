@@ -1,9 +1,16 @@
-このスクリプトは基本的なDebianシステムにクランチバングの
+このスクリプトは基本的なDebianシステムにクランチバンの
 XFCE-Openboxバーションの日本語版をインストールします。
 
-しかし、正式なクランチバングのインストール方法ではありません。
-なにか問題がおきてもクランチバングは一切責任をもちませんが、
-フォーラムでは他のメンバーのある程度の助けを得られるかもしれません。（英語で）
+これは Windows に慣れている日本人向けに提供された日本語版です。
+インストールが完了した状態で日本語表示・入力が可能です。
+（インプッドメソットは ibus-mozc。ブラウザの  Iceweasel 等も日本語表示されます）
+また、Xfce を使用し、Windows のレイアウトにしてあり、
+CrunchBang の世界に入りやすい環境にしてあります。
+
+しかし、正式なクランチバンのインストール方法ではありません。
+なにか問題がおきてもクランチバンは一切責任をもちませんが、
+フォーラムでは他のメンバーのある程度の助けを得られるかもしれません（英語で）:
+http://crunchbang.org/forums/viewtopic.php?id=33555
 
 また、インストール中のメセージが全部英語です。
 
@@ -21,7 +28,9 @@ This is NOT an official CrunchBang install medium.
 Any problems you may experience are not the responsibility of
 CrunchBang, although you may possibly be able to resolve some of them
 by asking other users at the CrunchBang Forums.
-There is a thread for discussion of bugs, improvements
+The thread for discussion of this japanese installer is here:
+http://crunchbang.org/forums/viewtopic.php?id=33555
+There is an older read-only thread for discussion of bugs, improvements
 or customization of the basic netinstaller here:
 http://crunchbang.org/forums/viewtopic.php?id=21266
 
@@ -34,13 +43,52 @@ Debian Wheezy CORE SYSTEM ONLY.
 Attempts will be made to backup any data that might exist,
 but please do not rely on it.
 
+インストール方法
+
+Debian のネットワークインストーラを使用します。
+下記 URL から「netinst イメージ」の「i386」または「amd64」をダウンロードします。
+http://cdimage.debian.or.jp/
+
+もし、無線LAN・Wi-Fi を使用する前提なら、
+non-free なパッケージを含んだ .iso ファイルを入手すると良いかもしれません。
+http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/
+
+入手した .iso ファイルを CD や USB メモリに入れて起動し、インストーラを進めて下さい。
+
+インストーラは日本語で進める事が可能です。この時次の作業に注意して下さい。
+* root のパスワードは何も入れない
+* ソフトウェアの選択とインストールは全て外す
+
+再起動後の作業手順で、メッセージを把握できるように、言語を English で進めても良いです。
+
+再起動したらログインし、コマンドラインがでたところで、次のコマンドを実行します。
+
+wget http://github.com/johnraff/cb-xfce-ja-netinstall/archive/master.tar.gz
+tar -xpf master.tar.gz
+cd cb-xfce-ja-netinstall-master
+./install
+
+この時 Debian インストーラで日本語を使用していた場合は文字化け表示されていますが、
+リボジトリからパッケージインストールする情報が把握できるでしょう。
+
+動作途中、リボジトリの扱いについて選択肢が生じます。
+通常は「replace」を選択して下さい。（a 以外のキー）
+「append」で Debian のリボジトリを残す事も可能です。
+
+また、ドライバー関連のライセンス確認で止まる場合があります。
+この時二つの選択肢は はい・いいえ になっています。
+tab キー と enter（return）キー が使えるでしょう。
+
+手順が完了し再起動すると、画面のデスクトップを見る事ができるでしょう。
+CrunchBang の世界へようこそ！
+
 HOW TO USE
 
 Boot into your Debian Netinstall cli system,
 log in and run these commands, as a normal user:
 (A fresh copy of this cb-xfce-ja-netinstall package will be downloaded.)
 
-wget https://github.com/johnraff/cb-xfce-ja-netinstall/archive/master.tar.gz
+wget http://github.com/johnraff/cb-xfce-ja-netinstall/archive/master.tar.gz
 tar -xpf master.tar.gz
 cd cb-xfce-ja-netinstall-master
 ./install
