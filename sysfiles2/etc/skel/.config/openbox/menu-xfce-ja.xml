@@ -185,7 +185,7 @@
                     </command>
                 </action>
             </item>
-            <item label="Transmission ビットレートクライアント">
+            <item label="Transmission ビットトレントクライエント">
                 <action name="Execute">
                     <command>
                         transmission-gtk
@@ -256,7 +256,7 @@
         <menu id="settings" label="設定">
             <menu execute="cb-compositor" id="CompositingPipeMenu" label="コンポジット"/>
             <menu id="conkyconfig" label="Conky">
-                <item label=".conkyrc を編集">
+                <item label=".conkyrc、その他 を編集">
                     <action name="Execute">
                         <command>
                             geany ~/.config/user/conky-sysmonrc ~/.config/user/conky-netmonrc ~/.conkyrc

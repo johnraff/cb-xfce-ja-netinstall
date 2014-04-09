@@ -1,14 +1,23 @@
 <bookmarks>
     <group name="root">
 		<group name="NHK">
-			<bookmark name="NHK FM 名古屋" url="http://mfile.akamai.com/220638/live/reflector:55740.asx"/>
-			<bookmark name="NHK 第一 名古屋" url="http://mfile.akamai.com/220637/live/reflector:52219.asx"/>
-			<bookmark name="NHK 第二 名古屋" url="http://mfile.akamai.com/129932/live/reflector:46056.asx"/>
+			<bookmark name="NHK 第一 東京" url="http://mfile.akamai.com/129931/live/reflector:46032.asx"/>
+			<bookmark name="NHK FM 東京" url="http://mfile.akamai.com/129933/live/reflector:46051.asx"/>
+			<bookmark name="NHK 第二" url="http://mfile.akamai.com/129932/live/reflector:46056.asx"/>
+			<group name="地方">
+				<bookmark name="大阪 第一" url="http://mfile.akamai.com/220635/live/reflector:53531.asx"/>
+				<bookmark name="大阪 FM" url="http://mfile.akamai.com/220636/live/reflector:50883.asx"/>
+				<bookmark name="名古屋 第一" url="http://mfile.akamai.com/220637/live/reflector:52219.asx"/>
+				<bookmark name="名古屋 FM" url="http://mfile.akamai.com/220638/live/reflector:55740.asx"/>
+				<bookmark name="仙台 第一" url="http://mfile.akamai.com/220639/live/reflector:59124.asx"/>
+				<bookmark name="仙台 FM" url="http://mfile.akamai.com/220640/live/reflector:52017.asx"/>
+			</group>
 		</group>
 		<group name="ワールド　色々">
 			<bookmark name="Mantra (radiolla)" url="http://air.radiolla.com/mantra192k"/>
 			<bookmark name="Yerevan Nights" url="http://www.yerevannights.com/Radio.pls"/>
-			</group>
+			<bookmark name="Wereldmuziek" url="http://streams.greenhost.nl:8080/wereldmuziek.m3u"/>
+		</group>
 		<group name="アフリカ">
 			<bookmark name="Wassoulou" url="http://listen.radionomy.com/radio-wassoulou-internationale.m3u"/>
 			<bookmark name="ZemaRadio (Ethiopian)" url="http://listen.radionomy.com/zema-radio.m3u"/>
